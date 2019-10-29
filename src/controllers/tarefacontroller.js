@@ -1,4 +1,4 @@
-const tarefa = require ("../ model/tarefa.json")
+const tarefa = require ("../model/tarefa.json")
 
 exports.get = (req, res) => {
     console.log (req.url)

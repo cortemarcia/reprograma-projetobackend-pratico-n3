@@ -1,8 +1,8 @@
 const express = require ("express")
 const router = express.Router()
 const controller = require ("../controllers/tarefacontroller")
-
-router.get ("/tarefa", controller.get)
+const tarefa = require('../model/tarefa.json')
+router.get("/tarefa", tarefa)
 
 
 
