@@ -1,0 +1,22 @@
+{
+  "name": "projetopratica",
+  "version": "1.0.0",
+  "description": "Projeto prático referente o que aprendi no curso de backend da {reprograma}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cortemarcia/reprograma-projetobackend-pratico-n3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cortemarcia/reprograma-projetobackend-pratico-n3/issues"
+  },
+  "homepage": "https://github.com/cortemarcia/reprograma-projetobackend-pratico-n3#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
