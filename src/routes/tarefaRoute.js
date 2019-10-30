@@ -1,8 +1,13 @@
-const express = require ("express")
+const express = require("express")
 const router = express.Router()
+
 const controller = require ("../controllers/tarefacontroller")
-const tarefa = require('../model/tarefa.json')
-router.get("/tarefa", tarefa)
+
+
+router.get("/", controller.get)
+router.get("/concluido", controller.getConcluido)
+router.get("/:id", controller.getById)
+
 
 
 
