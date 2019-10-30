@@ -9,6 +9,8 @@ Atividade Obrigatória:
 
 Atividade Opcional:
 
+- Incluir o nome do colaborador que realizou a tarefa;
+
 - GET/tarefas/concluidos/filtrar;
 
 - GET /tarefas/:nome/buscar.
