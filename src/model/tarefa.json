@@ -4,8 +4,9 @@
 		"dataInclusao": "12/08/2019",
 		"concluido": "false",
 		"descricao": "Tarefa 1 - Agora Vai",
-		"colaborador": "Genilson"
-		
+		"colaborador": "Genilson",
+		"conclusao": "12/09/2019"
+	
 	}, 
 
 {
@@ -13,7 +14,8 @@
 	"dataInclusao": "12/10/2019",
 	"concluido": "true",
 	"descricao": "Tarefa 2 - VAI COM TUDO",
-	"colaborador": "João"
+	"colaborador": "João",
+	"conclusao": "12/09/2019"
 },
 
 {
@@ -21,14 +23,16 @@
 	"dataInclusao": "01/10/2019",
 	"concluido": "false",
 	"descricao": "Tarefa 3 - VAI Q É TUA ",
-	"colaborador": "Betina"
+	"colaborador": "Betina",
+	"conclusao": "27/12/2019"
 },
 
 {
 	"id": 4,
-	"dataInclusao": "02/09/2019",
+	"dataInclusao": "02/09/2018",
 	"concluido": "true",
 	"descricao": "Tarefa Final - CONGRATIONS ",
-	"colaborador": "Laura"
+	"colaborador": "Laura",
+	"conclusao": "27/02/2019"
 }
 ]
