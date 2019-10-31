@@ -1,6 +1,5 @@
 const tarefa = require ("../model/tarefa.json")
-let data = tarefa.dataInclusao
-let novaData =  new Date(data)
+ 
 
 
 const teste = function ordenar(a,b){ 
@@ -14,9 +13,9 @@ const teste = function ordenar(a,b){
     }
 }
 console.log(teste)
-exports.get = (req, res) => {
-    console.log (req.url)    
 
+exports.get = (req, res) => {
+    console.log (req.url)  
     res.status(200).send(tarefa.sort(teste))
 }
 
