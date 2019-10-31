@@ -1,6 +1,6 @@
-const tarefa = require ("../model/tarefa.json")
-let dt = tarefa.dataInclusao
-let novaData = new Date (dt)
+const tarefa = require ("../model/tarefa.json");
+let dt = tarefa.dataInclusao;
+let novaData = new Date (dt);
 
  function ordenar(a,b){ 
     if (a.novaData > b.novaData){
