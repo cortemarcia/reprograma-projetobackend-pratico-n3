@@ -1,21 +1,8 @@
 const tarefa = require ("../model/tarefa.json");
-let dt = tarefa.dataInclusao;
-let novaData = new Date (dt);
-
- function ordenar(a,b){ 
-    if (a.novaData > b.novaData){
-        return  -1;
-    } else if (a.novaData < b.novaData) {
-         return 1;    
-    }else{
-        return 0;
-    }
-}
-
 
 exports.get = (req, res) => {
     console.log (req.url)  
-    res.status(200).send(ordenar)
+    res.status(200).send(tarefa)
 }
 
 exports.getById = (req, res)=>{
@@ -37,9 +24,26 @@ exports.getColaborador = (req,res)=>{
     const colaborador = req.params.colaborador
     res.status(200).send(tarefa.filter(tarefa => tarefa.colaborador == colaborador))
 }
+
+let dt = tarefa.dataInclusao
+let novaData = new Date (dt)// pq não puxa essa variavel
+
+
+
+ function ordenar(a,b){ 
+    if (a.novaData > b.novaData){
+        return  -1;
+    } else if (a.novaData < b.novaData) {
+         return 1;    
+    }else{
+        return 0;
+    }
+}
+// console.log (ordenar(......))VER SOBRE ISSO
 exports.getOrdenar =(req, res)=>{
-    const ord = tarefa.filter(tarefa => tarefa.dataInclusao == dataInclusao)
-    res.status (200).send(ord.sort())
+    const incl = tarefa.dataInclusao// Puxando info j.son errado, Verificar com monitora forma correta
+    const ord = tarefa.filter(tarefa => tarefa.incl == incl)//Não esta identificando o dataInclusao
+    res.status (200).send(ord.sort(ordenar))
 
 }
 
