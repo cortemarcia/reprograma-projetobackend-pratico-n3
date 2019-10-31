@@ -1,18 +1,23 @@
 const tarefa = require ("../model/tarefa.json")
+let data = tarefa.dataInclusao
+let novaData =  new Date(data)
 
-function ordenar(a,b){
-    if (a.dataInclusao > b.dataInclusao){
+
+const teste = function ordenar(a,b){ 
+
+    if (a.novaData > b.novaData){
         return -1;
-    } else if (a.dataInclusao < b.dataInclusao) {
+    } else if (a.novaData < b.novaData) {
          return 1;
     }else{
         return 0;
     }
 }
+console.log(teste)
 exports.get = (req, res) => {
     console.log (req.url)    
 
-    res.status(200).send(tarefa.sort(ordenar))
+    res.status(200).send(tarefa.sort(teste))
 }
 
 exports.getById = (req, res)=>{
