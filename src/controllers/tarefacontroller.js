@@ -1,8 +1,18 @@
 const tarefa = require ("../model/tarefa.json")
 
+function ordenar(a,b){
+    if (a.dataInclusao > b.dataInclusao){
+        return -1;
+    } else if (a.dataInclusao < b.dataInclusao) {
+         return 1;
+    }else{
+        return 0;
+    }
+}
 exports.get = (req, res) => {
-    console.log (req.url)
-    res.status(200).send(tarefa)
+    console.log (req.url)    
+
+    res.status(200).send(tarefa.sort(ordenar))
 }
 
 exports.getById = (req, res)=>{
@@ -22,7 +32,7 @@ exports.getPendente = (req, res) => {
 
 exports.getColaborador = (req,res)=>{
     const colaborador = req.params.colaborador
-    res.status(200).send(tarefa.find(tarefa => tarefa.colaborador == colaborador))
+    res.status(200).send(tarefa.filter(tarefa => tarefa.colaborador == colaborador))
 }
 
 
