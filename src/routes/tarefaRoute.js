@@ -5,11 +5,11 @@ const controller = require ("../controllers/tarefacontroller")
 
 
 router.get("/", controller.get)
+router.get("/ordenar", controller.getOrdenar)
 router.get("/concluido", controller.getConcluido)
 router.get ("/pendente", controller.getPendente)
 router.get("/:id", controller.getById)
 router.get("/colaborador/:colaborador", controller.getColaborador)
-
 
 
 

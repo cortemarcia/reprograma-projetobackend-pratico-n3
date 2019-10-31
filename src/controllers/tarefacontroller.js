@@ -1,22 +1,21 @@
 const tarefa = require ("../model/tarefa.json")
- 
+let dt = tarefa.dataInclusao
+let novaData = new Date (dt)
 
-
-const teste = function ordenar(a,b){ 
-
+ function ordenar(a,b){ 
     if (a.novaData > b.novaData){
-        return -1;
+        return  -1;
     } else if (a.novaData < b.novaData) {
-         return 1;
+         return 1;    
     }else{
         return 0;
     }
 }
-console.log(teste)
+
 
 exports.get = (req, res) => {
     console.log (req.url)  
-    res.status(200).send(tarefa.sort(teste))
+    res.status(200).send(ordenar)
 }
 
 exports.getById = (req, res)=>{
@@ -38,7 +37,9 @@ exports.getColaborador = (req,res)=>{
     const colaborador = req.params.colaborador
     res.status(200).send(tarefa.filter(tarefa => tarefa.colaborador == colaborador))
 }
+exports.getOrdenar =(req, res)=>{
+    const ord = tarefa.filter(tarefa => tarefa.dataInclusao == dataInclusao)
+    res.status (200).send(ord.sort())
 
-
-
+}
 
