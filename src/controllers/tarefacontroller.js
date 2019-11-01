@@ -25,25 +25,50 @@ exports.getColaborador = (req,res)=>{
     res.status(200).send(tarefa.filter(tarefa => tarefa.colaborador == colaborador))
 }
 
-let dt = tarefa.dataInclusao
-let novaData = new Date (dt)// pq não puxa essa variavel
+exports.getCompare = (req, res) => {
+    const id = req.params.id
+    const filtro = tarefa.filter(tarefa => tarefa.id == id)
+    const valor = filtro.dataInclusao
+    const arrData = valor.split("/")
+    const dia = arrData[0]
+    const mes = arrData[1]
+    const ano = arrData[2]
+    const data = converterData(ano, mes, dia)
+    res.status(200).send({ data })
+  }
 
 
-
- function ordenar(a,b){ 
-    if (a.novaData > b.novaData){
-        return  -1;
-    } else if (a.novaData < b.novaData) {
-         return 1;    
-    }else{
-        return 0;
+  function converterData(ano, mes, dia) {
+    const now = new Date()
+    const anoAtual = now.getFullYear()
+    const mesAtual = now.getMonth() + 1
+    const hoje = now.getDate()
+  
+    let idade = anoAtual - ano
+  
+    if (mesAtual < mes || (mesAtual == mes && hoje < dia)) {
+      idade -= 1
     }
-}
-// console.log (ordenar(......))VER SOBRE ISSO
-exports.getOrdenar =(req, res)=>{
-    const incl = tarefa.dataInclusao// Puxando info j.son errado, Verificar com monitora forma correta
-    const ord = tarefa.filter(tarefa => tarefa.incl == incl)//Não esta identificando o dataInclusao
-    res.status (200).send(ord.sort(ordenar))
+    return idade
+  }
 
-}
+
+// const teste = tarefa.parseInt(dataInclusao)
+// console.log(teste)
+
+// function compare(a,b) {
+    
+//     console.log( parseInt(a.dataInclusao));
+//   }
+  
+//   console.log(compare('12/09/2019'));
+
+
+
+
+
+// exports.getOrdenar =(req, res)=>{
+    
+//     res.status (200).send(compare)
+/* } */
 
