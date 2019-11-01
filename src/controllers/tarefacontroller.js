@@ -27,7 +27,7 @@ exports.getColaborador = (req,res)=>{
 
 exports.getCompare = (req, res) => {
     const id = req.params.id
-    const filtro = tarefa.filter(tarefa => tarefa.id == id)
+    const filtro = tarefa.filter(item => item.id == id)
     const valor = filtro.dataInclusao
     const arrData = valor.split("/")
     const dia = arrData[0]
