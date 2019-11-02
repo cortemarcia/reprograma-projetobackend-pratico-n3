@@ -16,5 +16,8 @@ Atividade Opcional:
 - GET /tarefas/:nome/buscar.
 
 Atividade Extra:
+h2
 
-- 
+- Para a API de tarefas, você deverá incluir mais uma chave para adicionar quando a tarefa foi concluída;
+
+- Você deverá listar as tarefas por data de inclusão. Das mais novas para as mais antigas.

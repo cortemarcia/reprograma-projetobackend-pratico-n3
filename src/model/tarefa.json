@@ -1,38 +1,34 @@
 [
 	{
 		"id": 1,
-		"dataInclusao":"12/04/2019",
+		"dataInclusao": "12/04/2019",
 		"concluido": "false",
 		"descricao": "Tarefa 1 - Agora Vai",
 		"colaborador": "Genilson",
 		"conclusao": "12/09/2019"
-	
-	}, 
-
-{
-	"id": 2,
-	"dataInclusao": "25/06/2019",
-	"concluido": "true",
-	"descricao": "Tarefa 2 - VAI COM TUDO",
-	"colaborador": "Betina",
-	"conclusao": "12/09/2019"
-},
-
-{
-	"id": 3,
-	"dataInclusao": "11/07/2019",
-	"concluido": "false",
-	"descricao": "Tarefa 3 - VAI Q É TUA ",
-	"colaborador": "Betina",
-	"conclusao": "27/12/2019"
-},
-
-{
-	"id": 4,
-	"dataInclusao": "28/05/2019",
-	"concluido": "true",
-	"descricao": "Tarefa Final - CONGRATIONS ",
-	"colaborador": "Laura",
-	"conclusao": "27/02/2019"
-}
+	},
+	{
+		"id": 2,
+		"dataInclusao": "25/06/2019",
+		"concluido": "true",
+		"descricao": "Tarefa 2 - VAI COM TUDO",
+		"colaborador": "Betina",
+		"conclusao": "12/09/2019"
+	},
+	{
+		"id": 3,
+		"dataInclusao": "11/07/2019",
+		"concluido": "false",
+		"descricao": "Tarefa 3 - VAI Q É TUA ",
+		"colaborador": "Betina",
+		"conclusao": "27/12/2019"
+	},
+	{
+		"id": 4,
+		"dataInclusao": "28/05/2019",
+		"concluido": "true",
+		"descricao": "Tarefa Final - CONGRATIONS ",
+		"colaborador": "Laura",
+		"conclusao": "27/02/2019"
+	}
 ]
