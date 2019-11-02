@@ -22,7 +22,7 @@ exports.getPendente = (req, res) => {
   const result1 = tarefa.filter(tarefa => tarefa.concluido == "false")
   res.status(200).send(result1)
 }
-//  ROTA /colaborador
+//  ROTA /:colaborador
 exports.getColaborador = (req, res) => {
   const colaborador = req.params.colaborador
   res.status(200).send(tarefa.filter(tarefa => tarefa.colaborador == colaborador))
