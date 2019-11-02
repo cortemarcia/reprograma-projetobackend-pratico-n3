@@ -9,6 +9,8 @@ exports.get = (req, res) => {
 exports.getById = (req, res) => {
   const id = req.params.id
   res.status(200).send(tarefa.find(tarefa => tarefa.id == id))
+
+// res.redirect(301 link do http 301) COLOCAR DIRECIONAMENTOS NAS ROTAS PARA O USUARIOS VISUALIZAR 
 }
 
 //ROTA /concluido
