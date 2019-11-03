@@ -37,7 +37,8 @@ function stringParaData(data) {
   const split = data.split("/")
   const dataComSeparador = split[1] + "-" + split[0] + "-" + split[2]
   // const dataComSeparador = `${split[1]} - ${split[0]} - ${split[2]}`
-  const novaData = new Date(dataComSeparador)
+  const novaData = Math.abs(new Date(dataComSeparador))
+  
   return novaData
 }
 
@@ -54,11 +55,20 @@ exports.getCompare = (req, res) => {
   res.status(200).send(dataOrdenadas)
 }
 
+// VERIFICAR PQ ESTA COM STATUS 200, PORÉM NÃO APARECE O CONTEUDO
 //ROTA diferença da data de inclusão com a data de finalização.
 
 exports.getTempoDeExecucao = (req, res) => {
-  const datas = tarefa.sort(function (a, b) {
-    return (stringParaData(a.dataInclusao) - stringParaData(b.conclusao))
+  const datas = tarefa.sort (function (a, b) {
+    return (stringParaData (a.dataInclusao) - stringParaData (b.conclusao))
   })
   res.status(200).send(datas)
+}
+// ROTA /nomeSobrenome
+
+exports.getNomeSobrenome = (req, res) => {
+  const nome = req.params.nome
+  const sobrenome = rq.params.sobrenome
+  res.status(200).send(tarefa.filter(tarefa => tarefa.nome == nome))
+  res.status(200).send(tarefa.filter(tarefa => tarefa.sobrenome == sobrenome))
 }
