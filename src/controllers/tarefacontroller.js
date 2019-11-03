@@ -10,7 +10,7 @@ exports.getById = (req, res) => {
   const id = req.params.id
   res.status(200).send(tarefa.find(tarefa => tarefa.id == id))
 
-// res.redirect(301 link do http 301) COLOCAR DIRECIONAMENTOS NAS ROTAS PARA O USUARIOS VISUALIZAR 
+  // res.redirect(301 link do http 301) COLOCAR DIRECIONAMENTOS NAS ROTAS PARA O USUARIOS VISUALIZAR 
 }
 
 //ROTA /concluido
@@ -30,7 +30,7 @@ exports.getColaborador = (req, res) => {
   res.status(200).send(tarefa.filter(tarefa => tarefa.colaborador == colaborador))
 }
 
-// ROTA PARA TAREFA ORDENADA /tarefaOrdenada
+/// ROTA PARA TAREFA ORDENADA /tarefaOrdenada
 
 // MAQUINA DE CONVERSÃO STRING --> DATA
 function stringParaData(data) {
@@ -52,4 +52,13 @@ exports.getCompare = (req, res) => {
     return 0;
   })
   res.status(200).send(dataOrdenadas)
+}
+
+//ROTA diferença da data de inclusão com a data de finalização.
+
+exports.getTempoDeExecucao = (req, res) => {
+  const datas = tarefa.sort(function (a, b) {
+    return (stringParaData(a.dataInclusao) - stringParaData(b.conclusao))
+  })
+  res.status(200).send(datas)
 }
