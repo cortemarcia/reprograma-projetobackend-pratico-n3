@@ -30,54 +30,13 @@ exports.getColaborador = (req, res) => {
   res.status(200).send(tarefa.filter(tarefa => tarefa.colaborador == colaborador))
 }
 
-<<<<<<< HEAD
-exports.getOrdenar = (res) => {
-    // const id = req.params.id
-    // const filtro = tarefa.find(tarefa => tarefa.id == id)
-    // const valor = filtro.dataInclusao
-    const arrData = dataInclusao.split("/")
-    const dia = arrData[0]
-    const mes = arrData[1]
-    const ano = arrData[2]
-    const data = converterData(ano, mes, dia)
-    res.status(200).send(compare)
-  }
-
-
-  function converterData(ano, mes, dia) {
-    const now = new Date()
-    const anoAtual = now.getFullYear()
-    const mesAtual = now.getMonth() + 1
-    const hoje = now.getDate()
-  
-    let idade = anoAtual - ano
-  
-    if (mesAtual < mes || (mesAtual == mes && hoje < dia)) {
-      idade -= 1
-    }
-    return idade
-  }
-
-
-// const teste = tarefa.parseInt(dataInclusao)
-// console.log(teste)
-
-function compare(a,b) {
-    
-    console.log( parseInt(a.dataInclusao));
-  }
-  
-//   console.log(compare('12/09/2019'));
-=======
-
 // ROTA PARA TAREFA ORDENADA /tarefaOrdenada
->>>>>>> 8f4d07239cb319ea21a9b873b35908728d408d4c
 
 // MAQUINA DE CONVERSÃO STRING --> DATA
 function stringParaData(data) {
   const split = data.split("/")
   const dataComSeparador = split[1] + "-" + split[0] + "-" + split[2]
-  const dataComSeparador = `${split[1]} - ${split[0]} - ${split[2]}`
+  // const dataComSeparador = `${split[1]} - ${split[0]} - ${split[2]}`
   const novaData = new Date(dataComSeparador)
   return novaData
 }
