@@ -10,7 +10,7 @@ router.get("/concluido/filtrar", controller.getConcluido)
 router.get("/pendente/filtrar", controller.getPendente)
 router.get("/:id", controller.getById)
 router.get("/:colaborador/buscar", controller.getColaborador)
-
+router.get("/diferenca", controller.getTempoDeExecucao)
 
 
 module.exports = router
