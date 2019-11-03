@@ -25,16 +25,16 @@ exports.getColaborador = (req,res)=>{
     res.status(200).send(tarefa.filter(tarefa => tarefa.colaborador == colaborador))
 }
 
-exports.getCompare = (req, res) => {
-    const id = req.params.id
-    const filtro = tarefa.filter(tarefa => tarefa.id == id)
-    const valor = filtro.dataInclusao
-    const arrData = valor.split("/")
+exports.getOrdenar = (res) => {
+    // const id = req.params.id
+    // const filtro = tarefa.find(tarefa => tarefa.id == id)
+    // const valor = filtro.dataInclusao
+    const arrData = dataInclusao.split("/")
     const dia = arrData[0]
     const mes = arrData[1]
     const ano = arrData[2]
     const data = converterData(ano, mes, dia)
-    res.status(200).send({ data })
+    res.status(200).send(compare)
   }
 
 
@@ -56,10 +56,10 @@ exports.getCompare = (req, res) => {
 // const teste = tarefa.parseInt(dataInclusao)
 // console.log(teste)
 
-// function compare(a,b) {
+function compare(a,b) {
     
-//     console.log( parseInt(a.dataInclusao));
-//   }
+    console.log( parseInt(a.dataInclusao));
+  }
   
 //   console.log(compare('12/09/2019'));
 
