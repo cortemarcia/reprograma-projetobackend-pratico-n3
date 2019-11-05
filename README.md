@@ -1,6 +1,12 @@
 # reprograma-projetobackend-pratico-n3
 ## Projeto prático referente o que aprendi no curso de backend da {reprograma}
 
+### Como usar no seu desktop?
+- Tenha instalado terminal GitBash;
+- Crie uma pasta, para melhor organização;
+- Faça um Git clone do repositório;
+- ......
+
 ====================================================
 
 #### Atividades Obrigatórias:
