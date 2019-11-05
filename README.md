@@ -1,9 +1,9 @@
 # reprograma-projetobackend-pratico-n3
-Projeto prático referente o que aprendi no curso de backend da {reprograma}
+## Projeto prático referente o que aprendi no curso de backend da {reprograma}
 
 ====================================================
 
-# Markdown Atividade Obrigatória:
+#### Atividades Obrigatórias:
 
 - GET /tarefas (Retornar a lista de tarefas em HTTP 200);
 
@@ -11,7 +11,7 @@ Projeto prático referente o que aprendi no curso de backend da {reprograma}
 
 ====================================================
 
-Atividade Opcional:
+### Atividades Opcionais:
 
 - Incluir o nome do colaborador que realizou a tarefa;
 
@@ -21,7 +21,7 @@ Atividade Opcional:
 
 ====================================================
 
-Atividade Extra:
+### Atividades Extras:
 
 
 - Para a API de tarefas, você deverá incluir mais uma chave para adicionar quando a tarefa foi concluída;
