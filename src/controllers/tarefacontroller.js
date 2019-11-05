@@ -57,21 +57,35 @@ exports.getCompare = (req, res) => {
 
 //ROTA diferença da data de inclusão com a data de finalização.
 
-exports.getTempoDeExecucao = (req, res) => {
-  const datas = tarefa.sort(function (a, b) {
-    
-    let menos = a.dataInclusao - b.conclusao
-    let diferenteDias =  Math.ceil (menos / (1000 *60 *60*24))
-    return diferenteDias
+exports.getTempoTarefa = (request, response) => {
+  tarefa.forEach(tarefa => {
+    console.log(tarefa)
+    tarefa.tempoDecorrido = diferencaDias(
+      conversorData(tarefa.dataInclusao),
+      conversorData(tarefa.conclusao)
+    )
   })
-  console.log(datas)
-  res.status(200).send(datas)
 
-  // obs: Fazer 3 funcoes, sendo:
-  // 1 string --> data;
-  // 2 Achar diferenca de tempo usando o for each
-  // 3 ver no git hub do reprograma.
+  response.status(200).send(tarefa)
 }
+// MAQUINA DE CONVERSÃO STRING --> DATA
+const conversorData = (dataString) => {
+  const dia = dataString.split("/")[0]
+  const mes = dataString.split("/")[1] - 1
+  const ano = dataString.split("/")[2]
+
+  const dataFormatada = new Date(ano, mes, dia)
+  return dataFormatada
+}
+
+//MAQUINA DE IDENTIFICACAO DE DIFERENCA DE DIAS +  STAMPtime
+const diferencaDias = (dataInicial, dataFinal) => {
+  const diferencaTempo = Math.abs(dataFinal - dataInicial)
+  const diferencaDias = Math.ceil(diferencaTempo / (1000 * 60 * 60 * 24))
+  return diferencaDias
+}
+
+
 // ROTA /nomeSobrenome
 
 exports.getNomeSobrenome = (req, res) => {
