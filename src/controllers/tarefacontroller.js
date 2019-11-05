@@ -56,7 +56,7 @@ exports.getCompare = (req, res) => {
 
 
 //ROTA diferença da data de inclusão com a data de finalização.
-
+// ROTA /data/buscar.
 exports.getTempoTarefa = (request, response) => {
   tarefa.forEach(tarefa => {
     console.log(tarefa)
@@ -66,7 +66,7 @@ exports.getTempoTarefa = (request, response) => {
     )
   })
 
-  response.status(200).send(tarefa)
+  response.status(200).send(tarefa)IT 
 }
 // MAQUINA DE CONVERSÃO STRING --> DATA
 const conversorData = (dataString) => {
@@ -78,10 +78,10 @@ const conversorData = (dataString) => {
   return dataFormatada
 }
 
-//MAQUINA DE IDENTIFICACAO DE DIFERENCA DE DIAS +  STAMPtime
+//MAQUINA DE IDENTIFICACAO DE DIFERENCA DE DIAS +  STAMPTIME
 const diferencaDias = (dataInicial, dataFinal) => {
   const diferencaTempo = Math.abs(dataFinal - dataInicial)
-  const diferencaDias = Math.ceil(diferencaTempo / (1000 * 60 * 60 * 24))
+  const diferencaDias = Math.ceil(diferencaTempo / (1000 * 60 * 60 * 24)) // CALCULO STAMPTIME
   return diferencaDias
 }
 
