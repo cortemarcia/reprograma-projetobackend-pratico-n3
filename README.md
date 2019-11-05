@@ -5,29 +5,29 @@
 
 #### Atividades Obrigatórias:
 
-- GET /tarefas (Retornar a lista de tarefas em HTTP 200);
+- [x] GET /tarefas (Retornar a lista de tarefas em HTTP 200);
 
-- GET/ tarefas/:id (Retornar somente a tarefa encontrada como idem HTTP 200).
+- [x] GET/ tarefas/:id (Retornar somente a tarefa encontrada como idem HTTP 200).
 
 ====================================================
 
 ### Atividades Opcionais:
 
-- Incluir o nome do colaborador que realizou a tarefa;
+- [x] Incluir o nome do colaborador que realizou a tarefa;
 
-- GET/tarefas/concluidos/filtrar;
+- [x] GET/tarefas/concluidos/filtrar;
 
-- GET /tarefas/:nome/buscar.
+- [x] GET /tarefas/:nome/buscar.
 
 ====================================================
 
 ### Atividades Extras:
 
 
-- Para a API de tarefas, você deverá incluir mais uma chave para adicionar quando a tarefa foi concluída;
+- [x] Para a API de tarefas, você deverá incluir mais uma chave para adicionar quando a tarefa foi concluída;
 
-- Você deverá listar as tarefas por data de inclusão. Das mais novas para as mais antigas.
+- [x] Você deverá listar as tarefas por data de inclusão. Das mais novas para as mais antigas.
 
-- Você deverá criar, na saída do json, adicionar uma chave para que mostre a diferença da data de inclusão com a data de finalização;
+- [x] Você deverá criar, na saída do json, adicionar uma chave para que mostre a diferença da data de inclusão com a data de finalização;
 
-- Você deverá cadastrar no seu json uma pessoa colaboradora com o nome e pelo menos 1 sobrenome. Ao passar o nome com o sobrenome sua API precisa continuar retornando as tarefas dessa pessoa colaboradora.
+- [ ] Você deverá cadastrar no seu json uma pessoa colaboradora com o nome e pelo menos 1 sobrenome. Ao passar o nome com o sobrenome sua API precisa continuar retornando as tarefas dessa pessoa colaboradora.
