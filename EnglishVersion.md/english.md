@@ -10,7 +10,7 @@
 
 ================================================== ==
 
-#### Required Activities:
+### Required Activities:
 
 - [x] GET / task (Return task list in HTTP 200);
 
@@ -37,4 +37,4 @@
 
 - [x] GET /data/buscar.(You should create, in json's output, add a key to show the difference between the inclusion date and the end date);
 
-- [] GET You must register in your json a collaborator with the name and at least 1 last name. By passing the first name with the last name your API needs to keep returning the tasks of this collaborator
+- [x] GET You must register in your json a collaborator with the name and at least 1 last name. By passing the first name with the last name your API needs to keep returning the tasks of this collaborator
