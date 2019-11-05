@@ -10,7 +10,7 @@ router.get("/concluido/filtrar", controller.getConcluido)
 router.get("/pendente/filtrar", controller.getPendente)
 router.get("/:id", controller.getById)
 router.get("/:colaborador/buscar", controller.getColaborador)
-router.get("/diferenca", controller.getTempoDeExecucao)
+router.get("/data/diferenca", controller.getTempoDeExecucao)
 router.get ("/nomeSobrenome/:nome %20 :sobrenome"), controller.getNomeSobrenome 
 
 

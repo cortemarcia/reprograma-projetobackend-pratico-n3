@@ -13,8 +13,6 @@ app.use(function (req, res, next) {
   next()
 })
 
-
-
 app.use("/tarefa", tarefa)
 
 
