@@ -11,7 +11,7 @@ router.get("/pendente/filtrar", controller.getPendente)
 router.get("/:id", controller.getById)
 router.get("/:colaborador/buscar", controller.getColaborador)
 router.get("/data/buscar.", controller.getTempoTarefa)
-router.get ("/nomeSobrenome/:nome %20 :sobrenome"), controller.getNomeSobrenome 
+router.get ("/nomeSobrenome/:nome %20 :sobrenome"), controller.getNomeSobrenome //PRECISA FINALIZAR
 
 
 module.exports = router

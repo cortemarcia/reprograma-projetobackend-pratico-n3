@@ -66,7 +66,7 @@ exports.getTempoTarefa = (request, response) => {
     )
   })
 
-  response.status(200).send(tarefa)IT 
+  response.status(200).send(tarefa)
 }
 // MAQUINA DE CONVERSÃO STRING --> DATA
 const conversorData = (dataString) => {
@@ -86,7 +86,8 @@ const diferencaDias = (dataInicial, dataFinal) => {
 }
 
 
-// ROTA /nomeSobrenome
+// ROTA /nomeSobrenome 
+// PRECISA FINALIZAR
 
 exports.getNomeSobrenome = (req, res) => {
   const nome = req.params.nome
